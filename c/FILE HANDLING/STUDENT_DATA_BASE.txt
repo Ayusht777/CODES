@@ -1,0 +1,4 @@
+1 NAME : hiney,MARKS :45
+2 NAME : jsjs,MARKS :45
+1 NAME : bill gates,MARKS :10
+2 NAME : zack,MARKS :50
