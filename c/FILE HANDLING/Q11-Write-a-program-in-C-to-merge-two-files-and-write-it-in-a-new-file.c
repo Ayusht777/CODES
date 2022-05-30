@@ -23,46 +23,68 @@ This is the file test1.txt.
 
 */
 #include <stdio.h>
+#include <stdlib.h>
 int main()
 {
     FILE *f1, *f2, *f3;
     char PATH1[100];
     char PATH2[100];
     char PATH3[100];
+    printf("\n---------------------------------------");
     printf("\nENTER THE FILE NAME 1:");
-    fgets(PATH1, sizeof(PATH1), stdin);
+    scanf("%s", PATH1);
     f1 = fopen(PATH1, "r");
     printf("\nENTER THE FILE NAME 2:");
-    fgets(PATH2, sizeof(PATH2), stdin);
+    scanf("%s", PATH2);
+    printf("\n---------------------------------------");
     f2 = fopen(PATH2, "r");
-    printf("\nENTER THE FILE NAME 3:");
-    fgets(PATH3, sizeof(PATH3), stdin);
-    f3 = fopen(PATH3, "w");
-    char s1;
-    while ((s1 = getc(f1)) != EOF)
+    if (f1 == NULL || f2 == NULL)
     {
+        printf("\nFILE DOESNOT EXIST");
+        exit(1);
+        // this statement will break the program
+    }
 
-        fputc(s1, f3);
-        fputc('\n', f3);
-    }
-    fclose(f1);
-    fclose(f3);
-    f3 = fopen(PATH3, "a");
-    char s2;
-    char z = '\n';
-    while ((s2 = getc(f2)) != EOF)
+    else
     {
+        printf("\nENTER THE FILE NAME 3:");
+        scanf("%s", PATH3);
+        f3 = fopen(PATH3, "w");
+        printf("\n---------------------------------------");
+        if (f3 == NULL)
+        {
+            printf("\nTHE FILE NOT CRETAED");
+            exit(1);
+        }
+        else
+        {
+            char s1;
 
-        fputc(s2, f3);
-        fputc('\n', f3);
+            while ((s1 = fgetc(f2)) != EOF)
+            {
+
+                fputc(s1, f3);
+            }
+            fputc('\n', f3);
+            // this will add new line to it
+            while ((s1 = fgetc(f1)) != EOF)
+            {
+
+                fputc(s1, f3);
+            }
+            fputc('\n', f3);
+            fclose(f1);
+            fclose(f2);
+            fclose(f3);
+            printf("\n------------------------------------------");
+            printf("\nMERGE FILE CONTENT :%s", PATH3);
+            f3 = fopen(PATH3, "r");
+            char s2[100];
+            while (fgets(s2, sizeof(s2), f3) != NULL)
+            {
+                printf("\n%s", s2);
+            }
+            fclose(f3);
+        }
     }
-    printf("\nTHE CONTENT OF 3RD FILE:\n");
-    char s3[100];
-    while (fgets(s3, sizeof(s3), f3) != NULL)
-    {
-        printf("%s", s3);
-    }
-    fclose(f3);
-    fclose(f2);
-    
 }
