@@ -11,12 +11,13 @@ exit
 */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct edata
 {
     char name[100];
     char eid[100];
-    int num;
+    char num[11];
     char add[150];
     int age;
     float salary;
@@ -24,6 +25,7 @@ struct edata
 
 void cndb();
 void adr();
+void laer();
 int main()
 {
     for (int i = 0; i < 101; i++)
@@ -61,6 +63,11 @@ int main()
     case 2:
     {
         adr();
+        break;
+    }
+    case 3:
+    {
+        laer();
         break;
     }
 
@@ -145,9 +152,47 @@ void adr()
         }
         for (int i = 0; i < n; i++)
         {
+            fflush(stdin);
             printf("\nENTER EMPLOYEE ID:");
-        }
+            fgets(d[i].eid, sizeof(d[i].eid), stdin);
+            fprintf(f2, "EMPLOYEE ID:%s\n", d[i].eid);
+            fflush(stdin);
+            printf("\nENTER EMPLOYEE NAME:");
+            fgets(d[i].name, sizeof(d[i].name), stdin);
+            fprintf(f2, "EMPLOYEE NAME:%s\n", d[i].name);
+            fflush(stdin);
+            printf("\nENTER EMPLOYEE AGE:");
+            scanf("%d", &d[i].age);
+            fprintf(f2, "EMPLOYEE AGE:%d\n", d[i].age);
+            fflush(stdin);
+            printf("\nENTER EMPLOYEE ADDRESS:");
+            fgets(d[i].add, sizeof(d[i].add), stdin);
+            fprintf(f2, "EMPLOYEE ADDRESS:%s\n", d[i].add);
+            fflush(stdin);
+        start:
+            printf("\nENTER EMPLOYEE PHONE NUMBER:");
+            scanf("%s", &d[i].num);
+            if (strlen(d[i].num) == 10)
+            {
+                fprintf(f2, "EMPLOYEE PHONE NUMBER:%s\n", d[i].num);
+            }
+            else
+            {
+                goto start;
+            }
 
-        fclose(f2);
+            fflush(stdin);
+            printf("\nENTER EMPLOYEE SALARY:");
+            scanf("%d", &d[i].salary);
+            fprintf(f2, "EMPLOYEE SALARY:%d\n", d[i].salary);
+
+            fclose(f2);
+        }
     }
+    
+}
+void laer()
+{
+  FILE *f3;
+  
 }
