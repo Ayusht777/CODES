@@ -26,6 +26,7 @@ struct edata
 void cndb();
 void adr();
 void laer();
+void eei();
 int main()
 {
     for (int i = 0; i < 101; i++)
@@ -155,26 +156,26 @@ void adr()
             fflush(stdin);
             printf("\nENTER EMPLOYEE ID:");
             fgets(d[i].eid, sizeof(d[i].eid), stdin);
-            fprintf(f2, "EMPLOYEE ID:%s\n", d[i].eid);
+            fprintf(f2, "EMPLOYEE ID:%s", d[i].eid);
             fflush(stdin);
             printf("\nENTER EMPLOYEE NAME:");
             fgets(d[i].name, sizeof(d[i].name), stdin);
-            fprintf(f2, "EMPLOYEE NAME:%s\n", d[i].name);
+            fprintf(f2, "EMPLOYEE NAME:%s", d[i].name);
             fflush(stdin);
             printf("\nENTER EMPLOYEE AGE:");
             scanf("%d", &d[i].age);
-            fprintf(f2, "EMPLOYEE AGE:%d\n", d[i].age);
+            fprintf(f2, "EMPLOYEE AGE:%d", d[i].age);
             fflush(stdin);
             printf("\nENTER EMPLOYEE ADDRESS:");
             fgets(d[i].add, sizeof(d[i].add), stdin);
-            fprintf(f2, "EMPLOYEE ADDRESS:%s\n", d[i].add);
+            fprintf(f2, "\nEMPLOYEE ADDRESS:%s", d[i].add);
             fflush(stdin);
         start:
             printf("\nENTER EMPLOYEE PHONE NUMBER:");
             scanf("%s", &d[i].num);
             if (strlen(d[i].num) == 10)
             {
-                fprintf(f2, "EMPLOYEE PHONE NUMBER:%s\n", d[i].num);
+                fprintf(f2, "EMPLOYEE PHONE NUMBER:%s", d[i].num);
             }
             else
             {
@@ -183,16 +184,52 @@ void adr()
 
             fflush(stdin);
             printf("\nENTER EMPLOYEE SALARY:");
-            scanf("%d", &d[i].salary);
-            fprintf(f2, "EMPLOYEE SALARY:%d\n", d[i].salary);
+            scanf("%f", &d[i].salary);
+            fprintf(f2, "\nEMPLOYEE SALARY:%.2f", d[i].salary);
+            fputc('\n', f2);
+            fputs("--",f2);
 
             fclose(f2);
         }
     }
-    
 }
 void laer()
 {
-  FILE *f3;
-  
+    system("cls");
+
+    for (int i = 0; i < 101; i++)
+    {
+        printf("-");
+    }
+    printf("\nLIST OF ALL EMPLOYEE RECORD");
+    printf("\n");
+
+    for (int i = 0; i < 101; i++)
+    {
+
+        printf("-");
+    }
+    char file3[100];
+    FILE *f3;
+    printf("\nENTER DATA BASE FILE NAME:");
+    scanf("%s", file3);
+    if (f3 == NULL)
+    {
+        printf("\nFILE DOESNOT EXIST");
+        exit(1);
+    }
+    else
+    {
+
+        f3 = fopen(file3, "r");
+        char r[100];
+        while (fgets(r, sizeof(r), f3) != NULL)
+        {
+            printf("%s", r);
+        }
+        fclose(f3);
+    }
+}
+void eei()
+{
 }
