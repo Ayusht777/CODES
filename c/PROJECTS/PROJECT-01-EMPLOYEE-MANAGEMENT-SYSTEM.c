@@ -16,7 +16,7 @@ exit
 struct edata
 {
     char name[100];
-    char eid[100];
+    char eid[10];
     char num[11];
     char add[150];
     int age;
@@ -26,54 +26,77 @@ struct edata
 void cndb();
 void adr();
 void laer();
-void eei();
+void ed();
+void dd();
 int main()
 {
-    for (int i = 0; i < 101; i++)
+    int option = 0;
+    while (option != 6)
     {
-        printf("-");
-    }
-    printf("\n                                   EMPLOYEE MANGEMENT SYSTEM                                       \n");
-    for (int i = 0; i < 101; i++)
-    {
-        printf("-");
-    }
-    printf("\n                                        SELECT OPTION'S ");
-    printf("\n                                       1.CREATE NEW DATA BASE");
-    printf("\n                                       2.ADD EMPLOYEE RECORD");
-    printf("\n                                       3.LIST OF ALL EMPLOYEE RECORD");
-    printf("\n                                       4.EDIT EMPLOYEE INFORMATION");
-    printf("\n                                       5.SREACH A PARTICULER EMPLOYEE");
-    printf("\n                                       6.EXIT\n");
-    for (int i = 0; i < 101; i++)
-    {
-        printf("-");
-    }
-    int option;
-    printf("\nSELECT ANY OPTION:\n");
-    scanf("%d", &option);
-    switch (option)
-    {
-    case 1:
-    {
+        printf("\n");
+        for (int i = 0; i < 101; i++)
+        {
+            printf("-");
+        }
+        printf("\n                                   EMPLOYEE MANGEMENT SYSTEM                                       \n");
+        for (int i = 0; i < 101; i++)
+        {
+            printf("-");
+        }
+        printf("\n                                        SELECT OPTION'S ");
+        printf("\n                                       1.CREATE NEW DATA BASE");
+        printf("\n                                       2.ADD EMPLOYEE RECORD");
+        printf("\n                                       3.LIST OF ALL EMPLOYEE RECORD");
+        printf("\n                                       4.ENCRYPTED DATA");
+        printf("\n                                       5.DECRYPTED DATA");
+        printf("\n                                       6.EXIT\n");
+        for (int i = 0; i < 101; i++)
+        {
+            printf("-");
+        }
 
-        cndb();
-        break;
-        // for creating new data base
-    }
-    case 2:
-    {
-        adr();
-        break;
-    }
-    case 3:
-    {
-        laer();
-        break;
-    }
+        printf("\nSELECT ANY OPTION:\n");
+        scanf("%d", &option);
+        switch (option)
+        {
+        case 1:
+        {
 
-    default:
-        break;
+            cndb();
+            break;
+            // for creating new data base
+        }
+        case 2:
+        {
+            adr();
+            break;
+        }
+        case 3:
+        {
+            laer();
+            break;
+        }
+        case 4:
+        {
+            ed();
+            break;
+        }
+        case 5:
+        {
+            dd();
+            break;
+        }
+        case 6:
+        {
+            exit(1);
+            break;
+        }
+        default:
+        {
+            printf("\nWRONG OPTION");
+            break;
+        }
+        }
     }
 }
 void cndb()
@@ -187,7 +210,6 @@ void adr()
             scanf("%f", &d[i].salary);
             fprintf(f2, "\nEMPLOYEE SALARY:%.2f", d[i].salary);
             fputc('\n', f2);
-            fputs("--",f2);
 
             fclose(f2);
         }
@@ -230,6 +252,103 @@ void laer()
         fclose(f3);
     }
 }
-void eei()
+void ed()
 {
+    system("cls");
+    for (int i = 0; i < 101; i++)
+    {
+        printf("-");
+    }
+    printf("\nENCRYPTED DATA");
+    printf("\n");
+
+    for (int i = 0; i < 101; i++)
+    {
+
+        printf("-");
+    }
+    FILE *f4, *f5;
+    char file4[100];
+    printf("\nENETR FILE NAME:");
+    scanf("%s", file4);
+    if (f4 == NULL)
+    {
+        printf("\nFILE DOESNOT EXITS");
+        exit(1);
+    }
+    else
+    {
+        f4 = fopen(file4, "r");
+        f5 = fopen("ENCRYPTED.txt", "w");
+        char s;
+        while ((s = fgetc(f4)) != EOF)
+        {
+            s = s + 40;
+            fputc(s, f5);
+        }
+        fclose(f4);
+        fclose(f5);
+        printf("\nFILE IS SUCCESFULLY CREATED");
+
+        f4 = fopen(file4, "w");
+        f5 = fopen("ENCRYPTED.txt", "r");
+        char a1;
+        while ((a1 = fgetc(f5)) != EOF)
+        {
+            putc(a1, f4);
+        }
+        fclose(f4);
+        fclose(f5);
+        remove("ENCRYPTED.txt");
+    }
+}
+void dd()
+{
+    system("cls");
+    for (int i = 0; i < 101; i++)
+    {
+        printf("-");
+    }
+    printf("\nENCRYPTED DATA");
+    printf("\n");
+
+    for (int i = 0; i < 101; i++)
+    {
+
+        printf("-");
+    }
+    FILE *f6, *f7;
+    char file5[100];
+    printf("\nENETR FILE NAME:");
+    scanf("%s", file5);
+    if (f6 == NULL)
+    {
+        printf("\nFILE DOESNOT EXITS");
+        exit(1);
+    }
+    else
+    {
+        f6 = fopen(file5, "r");
+        f7 = fopen("DECRYPTED.txt", "w");
+        char s;
+        while ((s = fgetc(f6)) != EOF)
+        {
+            s = s - 40;
+            fputc(s, f7);
+        }
+        fclose(f6);
+        fclose(f7);
+        printf("\nFILE IS SUCCESFULLY CREATED");
+
+        f6 = fopen(file5, "w");
+        f7 = fopen("DECRYPTED.txt", "r");
+        char a2;
+        while ((a2 = fgetc(f7)) != EOF)
+        {
+            putc(a2, f6);
+        }
+        fclose(f6);
+        fclose(f7);
+        remove("DECRYPTED.txt");
+    }
 }
