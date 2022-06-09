@@ -39,7 +39,7 @@ print(z)
 z = 'hello bake cake bake times '
 z= z.split(" ",)
 print(z)"""
-x ="aysa"
+"""x ="aysa"
 print(x.isalpha())
 x ="ays  a"
 print(x.isalpha())
@@ -86,12 +86,66 @@ print(nac.center(12,"-"))
 print("[[]]]]]]]][]]]]]\]\\")
 a = "www"
 print(a.isidentifier())
-"""The isidentifier() method returns True if the string is a valid identifier, otherwise False.
+The isidentifier() method returns True if the string is a valid identifier, otherwise False.
 
 A string is considered a valid identifier if it only contains alphanumeric letters (a-z) and (0-9), or underscores (_).
-A valid identifier cannot start with a number, or contain any space"""
+A valid identifier cannot start with a number, or contain any space
 e = "Aasdsfsf"
-print(e.istitle())
+print(e.istitle())"""
 #it will print if first word of a sentence is captile
+
+# print("my name is {}".format("ayush"))
+# # {} is a p;ace holder
+# x = "ayush"
+# print("my name is {}".format(x))
+# a = "name"
+# b = "game"
+# c ="fame"
+# print("something {},{},{}".format(a,b,c))
+# # lets change the oreder
+# print("something {2},{1},{0}".format(a,b,c))
+#  # lets repeate a single string
+# print("something {1},{1},{1}".format(a,b,c))
+# p = 500
+# p_per= 500/42
+# print("THE PRICE PER KG {} AND PER PEICE {}".format(p,p_per))
+# # lets use perision
+# print("THE PRICE PER KG {} AND PER PEICE {:0.2f}".format(p,p_per))
+# #pading this will ad white spaces as you want
+# # left pading
+# print("hello my {a:>10} bless you".format(a= "good"))
+# # right padding
+# print("checking something {r:<10} here".format(r = "right"))
+# #center padiing
+# print("checking something {c:^15}a".format(c = "center"))
+# # lets add another symoble as padding
+# print("hello {z:=^8}new ".format(z="my"))
+#------------------------------------------------------
+# fstring
+# name = "ayush"
+# print(f"hello my friend {name}")
+# # persion
+# q =475.5
+# w = q/2
+# print(f"the q = {q:1} and the w ={w:1.2f}")
+# num = 23.45984
+# print("your number is:{0:10.4f}".format(num).upper())
+# print(f"your number is:{num:10.2f}".lower())
+# print(f"47 divide 9 is eqaul to {47/9:2.1f}") # using percision
+#------------------------------------------------------------------------
+# # % formmatting
+# print("hello %s"%("world"))
+# z = "ayush"
+# s ="\ttalesara"
+# print("hello %s %s"%(z,s))
+# # %r it is raw version of any string
+# print("hello %s %r"%(s,s))
+# print("%s %d"%(9.9,9.9))
+# # %d is integer place holder
+# #padding
+# print("9 div by 7 = %1.2f"%(9/7))
+# print("7 div by 17 = %5.3f"%(7/17))
+#----------------------------------------------------------------------------
+
 
 
