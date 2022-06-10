@@ -92,7 +92,7 @@ A string is considered a valid identifier if it only contains alphanumeric lette
 A valid identifier cannot start with a number, or contain any space
 e = "Aasdsfsf"
 print(e.istitle())"""
-#it will print if first word of a sentence is captile
+# it will print if first word of a sentence is captile
 
 # print("my name is {}".format("ayush"))
 # # {} is a p;ace holder
@@ -120,7 +120,7 @@ print(e.istitle())"""
 # print("checking something {c:^15}a".format(c = "center"))
 # # lets add another symoble as padding
 # print("hello {z:=^8}new ".format(z="my"))
-#------------------------------------------------------
+# ------------------------------------------------------
 # fstring
 # name = "ayush"
 # print(f"hello my friend {name}")
@@ -132,7 +132,7 @@ print(e.istitle())"""
 # print("your number is:{0:10.4f}".format(num).upper())
 # print(f"your number is:{num:10.2f}".lower())
 # print(f"47 divide 9 is eqaul to {47/9:2.1f}") # using percision
-#------------------------------------------------------------------------
+# ------------------------------------------------------------------------
 # # % formmatting
 # print("hello %s"%("world"))
 # z = "ayush"
@@ -145,7 +145,32 @@ print(e.istitle())"""
 # #padding
 # print("9 div by 7 = %1.2f"%(9/7))
 # print("7 div by 17 = %5.3f"%(7/17))
-#----------------------------------------------------------------------------
-
-
+# ----------------------------------------------------------------------------
+# list
+# ls1 = ["he", 455, .1442, '@']
+# print(ls1)
+# print(len(ls1))
+# # length of list mean total element
+# print(f"the list = {ls1} and lenth = {len(ls1)}")
+# # adding two list
+# ls2 = ["new", "5445", 774]
+# print(ls1+ls2)
+# # letys store this in new list
+# ls = ls1 + ls2
+# print(ls)
+# # now add any elemnt in this list
+# ls = ls + ["s"]
+# print(ls)
+# #indexing and slicing in list
+# print(ls[0])
+# print(f"'{ls[0]}'")
+# print(ls[0:3])
+# print(ls[::-1])
+# # reverse list
+# #lets cahnge any particluar indexing element
+# ls[0]= "a"
+# print(ls)
+# # multi the elemnet
+# print(ls*2)
+#=================================================================
 
