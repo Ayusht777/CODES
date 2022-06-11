@@ -173,6 +173,194 @@ print(e.istitle())"""
 # # multi the elemnet
 # print(ls*2)
 #=================================================================
+# list methods
+# ls = [1,2,3,4]
+# print(ls)
+# ls.append(5)#to add element
+# print(ls)
+# ls.append("aks")
+# print(ls)
+# ls.pop(0)# it will remove the element at 0 index
+# print(ls)
+# # or remove method
+# ls.remove(3) # it will particluar element
+# print(ls)
+# #or
+# del ls[0]
+# print(ls)
+# ls.remove("aks")
+# ls.sort()# it will sort but only should  a hve singular data type
+# print(ls)
+# ls.reverse()
+# print(ls)
+# lx = [43,4,66,8894,7]
+# ls.extend(lx)#it will merege two list at end of one
+# print(ls)
+# ls.insert(0,47.55)# add particlure elemnent at any index
+# print(ls)
+# lx.extend(ls)
+# print(lx)
+# #.clear
+# ls.clear()
+# print(ls)
+# #.index to find index of any element
+# print(lx.index(66))
+# # .count it will count how many times a element Qcurres
+# print(lx)
+# print(lx.count(66))
+# ls = lx.copy()
+# print(ls)
+# #nested list
+# lz= [4,5,[4,7,8],3]
+# print(lz)
+# print(lz[2][2])
+# lx = [lz,45]
+# print(lx)
+# print(lx[0][2][2])
+# #dictionary
+# dic = {"int":788,"float":7.24,"list":[4,7,8],"str":"sdssdfsd","dic":{"x":"sasa"},"tup":(1,5)}
+# print(dic)
+# print(dic["tup"][1])
+# dic["float"] =45.47 # we have just change value of a key
+# print(dic)
+# # let perform arthmetic to dic
+# dic["float"] = dic["float"] - 4
+# print(dic)
+# dic["str"]=dic["str"].upper()
+# print(dic)
+# dic["a"]=458
+# print(dic)
+# print(dic.values(),"\n",dic.keys(),"\n",dic.items())
+# print(dic.get("int"))
+# dic.pop("float")
+# print(dic)
+#--------------------------------------------------------------
+# # dic built methods
+# dic  = {"s":555,"a":78,"re":788,"w":79.8}
+# print(dic)
+# dic.pop("re")
+# print(dic)
+# dic.popitem()# removes last key
+# print(dic)
+# dic2 = {"we":5446,"a":7.8}
+# print("dic2 =",dic2)
+# dic.update(dic2)
+# print(dic)
+# dicc = dic.copy()
+# print(dicc)
+
+# ls = '1'
+# newdic = dicc.fromkeys(dicc,ls)
+# print(newdic)
+
+# newdic.setdefault("xs")
+# print(newdic)
+# newdic.setdefault("sd",77)
+# print(newdic)
+# # it will convert two set in a dic
+# nx = {"sdssdf"}
+# print(type(nx))
+# nz = {"774"}
+
+# ew = dict(zip(nx,nz))
+# print(ew)
+# print(len(ew))
+# ew = {1:"ss",2:"dsd"}
+# print(all(ew))
+# print(any(ew))
+# ex = {}
+# print(type(ex))
+# print(any(ex))# false due to empty dict
+# qw = {"a":1,"c":3,"b":2}
+# qw = sorted(qw.items())
+# print(qw)
+#=-====-----------==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-==
+# # nested dict
+# dic = {"sss":455,"x":{"ass":545645}}
+# print(dic["x"]["ass"])
+
+# #********************************************************
+# # tuples
+# # it cannot be change
+# t1 = (456,4,7,7)
+# print(t1)
+# print(len(t1))
+# print(t1[0])
+# t1 = (14,775,[774,88])
+# print(t1[2][0])
+# print(t1[::-1])
+# #t[0]= 44545
+# # cannot chnage
+# t2 =(544,5466)
+# t = t1 + t2
+# print(t)
+# t = (442,t1)
+# print(t)
+# print(type(t))
+# print(max(t))
+# print(min(t))
+# ??????????????????????????????????????????????????????????????
+# # sets
+# se = {455,78,88}
+# print(type(se))
+# # we cannot use mutable elmeenst in sets like list ,dic,set
+# sx = {"asdsd",45.4,77,(4544)}
+# print(sx)
+# sx.add(0.10)# it is unorder
+# print(sx)
+# sx.update([4.4,78.899])
+# #syntax set.update([value1,value2.....])
+# print(sx)
+# # set witj only str
+# se = set("sdnjasfnsfkjsfn")# typecasting
+# print(se)
+# se.remove("s")
+# print(se)
+# # or
+# se.discard("j")#it will not give error if element doesnot present
+# print(se)
+# se.pop()
+# print(se)
+# #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# #set methods
+# from traceback import print_tb
+
+
+# x= {4,1,7,8}
+# y = {7,4,5,6}
+# print(x|y)#unions
+# # with non repated elmenets
+# z = x.union(y)
+# print(z)
+# print(x&y)
+# z = x.intersection(y)
+# print(z)
+# print(x-y)
+# print(y-x)
+# z =x.difference(y)
+# print(z)
+# z =y.difference(x)
+# print(z)
+# print(sum(x))
+# z= frozenset(x)# cannot chnage
+# dic = {"sd":44}
+# print(frozenset(dic))
+#/////////////////////////////////////
+# # bool
+# a = True
+# print(type(a))
+# print(int(a))
+# b = False
+# print(type(b))
+# print(int(b))
+# print(2<3)
+# print(3>2)
+# print(2==2)
+# print(2!=0)
+# print(4>=3)
+# print(3<=1)
+# x= None
+# print(x)
 
 
 
@@ -181,5 +369,4 @@ print(e.istitle())"""
 
 
 
-print("hello")
 
