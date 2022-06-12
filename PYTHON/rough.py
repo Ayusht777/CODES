@@ -172,7 +172,7 @@ print(e.istitle())"""
 # print(ls)
 # # multi the elemnet
 # print(ls*2)
-#=================================================================
+# =================================================================
 # list methods
 # ls = [1,2,3,4]
 # print(ls)
@@ -234,7 +234,7 @@ print(e.istitle())"""
 # print(dic.get("int"))
 # dic.pop("float")
 # print(dic)
-#--------------------------------------------------------------
+# --------------------------------------------------------------
 # # dic built methods
 # dic  = {"s":555,"a":78,"re":788,"w":79.8}
 # print(dic)
@@ -274,7 +274,7 @@ print(e.istitle())"""
 # qw = {"a":1,"c":3,"b":2}
 # qw = sorted(qw.items())
 # print(qw)
-#=-====-----------==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-==
+# =-====-----------==-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-==
 # # nested dict
 # dic = {"sss":455,"x":{"ass":545645}}
 # print(dic["x"]["ass"])
@@ -345,7 +345,7 @@ print(e.istitle())"""
 # z= frozenset(x)# cannot chnage
 # dic = {"sd":44}
 # print(frozenset(dic))
-#/////////////////////////////////////
+# /////////////////////////////////////
 # # bool
 # a = True
 # print(type(a))
@@ -362,11 +362,124 @@ print(e.istitle())"""
 # x= None
 # print(x)
 
+from optparse import Values
+import os # working dir folder
+# f = open("te.txt")
+# x = f.read()
+# print(x)
+# y = f.read()
+# print(y)  # it is null due to pointer is at end
+# f.seek(0)  # it will rewind the pointer
+# x = f.read()
+# print(x)
+# f.close()
+# with open("te.txt") as f:  # it is just a cursor rweinder
+#     r = f.read()
+# print(r)
+# print(r)
+# f.close()
+# with open("te.txt") as f:
+#     rr = f.readlines()  # ! new lines with list
+# print(rr)
+# f.close()
+# f = open("te.txt", "r")
+# print(f.read())
+# f.close()
+# with open("te.txt") as f:
+#     rr = f.readline()  # ! new lines with string
+# print(rr)
+# f.close()
+# print(os.listdir())
+# f = open("te.txt", "a")
+# f.write("\nschdfjfjcd788")
+# f.close()
+# # more about file handling going to learn soon after function
 
 
+# #!????~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# #chained comparssion opertor
+# print(1<2 and 2<3)
+# print(2>4 or 2<4)
 
+# print("h"=="H" or "h"!= "h")
+# x = "ayush"
 
+# # Python Identity Operators
+# print(1 is 1 )
+# print(2 is not 4 )
+# #Python Membership Operators
+# print("x" not in  x)
+# print("a"in x)
+# #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# # if ('h'=="x"):
+# # 	print("correct")
+# # else:
+# # 	print("not correct")
+# # print("ENTER A NUMBER:")
+# # x = int(input())# type casting is requried in python
+# # if (x%2==0):
+# # 	print("even")
+# # else:
+# #print("odd")
+# x = "program to determine your age group"
 
+# print(x.upper())
+# print("ENTER YOUR AGE:")
+# x = int(input())
+# if(x<=2):
+# 	print("YOUR ARE A BABY")
+# elif(x<=12):
+# 	print("YOU ARE A CHILD")
+# elif(x<=19):
+# 	print("YPUR ARE A TEENAGER")
+# else:
+# 	print("IT IS TIME TO WORK")
 
+#*************************************************************
+# for loops
+# print("ENTER YOUR NAME:")
+# name = str(input())
+# for i in name:
+# 	print(i)
+#
+#  print(i.upper())
 
+# # for loop using list
+# ls =[4,47,.01]
+# for i in ls:
+# 	print(i)
+# for i  in range(0,3):
+# 	print(ls[i],":",i)
+# s = 0
+# for i in ls:
+# 	s= s+i
+# print(s)
+# tu = (4,5,7,8)
+# x =0
+# for i in tu:
+# 	print(x+1,i)
+# 	x+=1
+# #tuple unpacing
+# tuu = [(1,5,47),(7,8,9)]
+# for i in tuu:
+# 	print(i)
+
+# for (i,j,k) in tuu:
+# 	print(i,j,k)
+# # loop over set
+# se = {1,5.0,4,8,7}
+# for i in se:
+# 	print(i)
+
+# dx = {"x":1,"z":7,"q":78}
+# for i in dx:
+# 	print(i)
+# for i in dx.items():
+# 	print(i)
+# for i in dx.values():
+# 	print(i)
+# # dic unpacking
+# d = {'k1':1,'k2':2,'k3':3}
+# for (k,v) in d :
+#     print(k,v)
 
