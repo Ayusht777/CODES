@@ -482,4 +482,79 @@ import os # working dir folder
 # d = {'k1':1,'k2':2,'k3':3}
 # for (k,v) in d :
 #     print(k,v)
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#while loop
+# i = 0
+# while(i<5):
+#     print(i)
+#     i+=1
+# # sum program using while loop
+# i = 0
+# sum = 0
+# n = int(input("ENTER A NUMBER:"))
+# while(n>0):
+#     sum = sum + n
+#     n-=1
+# print(f"THE SUM {sum}")
+# program to print table of given number
+# n = int(input("ENTER A NUMBER:"))
+# t= 1
+# while(t<10):
+#     x=n*t
+#     print(f"{n}*{t} = {x}")
+#     t+=1
+# # print all odd and even number from range
+# n = int(input("ENTER A END NUMBER FOR WHICH YOU WANT SEE LIST OF ODD AND EVEN:"))
+# i =1
+# e = 0
+# o = 0
+# while(i<n):
+#     if i%2== 0:
+#         print(f"{i} NUMBER IS EVEN")
+#         e+=1
+#     else:
+#         print(f"{i} NUMBER IS ODD")
+#         o+=1
+
+#     i+=1
+# print(f"THE TOTAL NUMBER EVEN NUMBER FROM 1 TO {n} = {e}")
+# print(f"THE TOTAL NUMBER ODD NUMBER FROM 1 TO {n}  = {o}")
+#///////////////////////////////////////////////////////////////////
+#nested loop
+# n = int(input('Enter number of rows : '))
+
+# i = 1
+# while i <= n :
+#     j = 1
+#     while j <= i:
+#         print("*", end = " ")
+#         j += 1
+#     print()#new line
+#     i += 1
+#////////////////////////////////////////////////////////
+# range operator
+# print(range(0,5))
+# ls = list(range(0,11))
+# print(ls)
+# ls = list(range(0,11,2))
+# print(ls)
+# ls = list(range(0,11,5))
+# print(ls)
+# ls = list(range(11,0,-1))
+# print(ls)
+# ls = list(range(-5,11))
+# print(ls)
+# # range in for loop
+# for i in range(0,5):
+#     print(i)
+# s = str(input("ENTER YOUR NAME:"))
+# z= 1
+# for i in s:
+#     print(f"INDEX{z:2} = {i}")
+#     z+=1
+# # zip
+# ls = [0,1,2,3]
+# lx =["a","c","d","e"]
+# print(dict(zip(ls,lx)))
+
 
