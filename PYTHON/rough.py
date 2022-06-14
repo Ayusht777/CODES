@@ -362,8 +362,11 @@ print(e.istitle())"""
 # x= None
 # print(x)
 
+import enum
 from optparse import Values
-import os # working dir folder
+import os
+
+from pyparsing import Char # working dir folder
 # f = open("te.txt")
 # x = f.read()
 # print(x)
@@ -556,5 +559,129 @@ import os # working dir folder
 # ls = [0,1,2,3]
 # lx =["a","c","d","e"]
 # print(dict(zip(ls,lx)))
+#------------------------------------------
+# python emumrate
+# for i,n in enumerate("hello world"):
+#     print(i,n)
+# x = "world\nNEW\nOLD"
+# for i,j in enumerate(x):
+#     print(i+1,j)
+
+# # lets import lib
+# from random import randint, shuffle
+
+# ls = [1,5,4,7,2]
+# ls = sorted(ls)
+# print(f"BEFORE SHUFFLE {ls}")
+# shuffle(ls)
+# print(f"AFTER SHUFFLE {ls}")
+# #from random import shuffle it is a repetive statment so let use
+# import random
+
+# i =0
+# while(i<10):
+#     x = randint(0,10) # tihs will print random number 10 times
+#     print(x)
+#     i+=1
+# # break continue pass
+
+# # ls = [7,8,9,7,1,4,5]
+
+
+# # for i in range(len(ls)):
+# #     if(i==ls[5]):
+# #         break
+# #     else:
+# #         print(ls[i])
+# #         i+=1
+
+# # t = (1,4,7,8,69,9)
+# # for i in range(len(t)):
+# #     if(i==t[4]):
+# #         break
+# #     else:
+# #         print(t[i])
+# #         i+=1
+# # x= str(input("ENTER YOUR NAME:"))
+# # for i in x:
+# #     if(i=="a"):
+# #         continue
+# #     else:
+# #         print(i)
+# # pass
+# for i in range(0,5):
+#     pass # i will add something later
+
+# x= str(input("ENTER YOUR NAME:")) #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!imp
+# n = len(x) -1
+# a = Char(input("ENTER A CHAR:"))
+# z = [0]*n
+# # print(z)
+# y=0
+# for i in x:
+#     if(i==a):
+#         continue
+#     else:
+
+#         z[y] = i
+#         y+=1
+
+# print(" ".join(z))
+#/////////////////////////////////////////////////////////////////////
+#/////////////////////////////////////////////////////////////////////
+# list comphersions
+# method 1
+# name = "ayush"
+# ls = list(name)
+# print(ls)
+# # method 2
+# ls = []
+# for i in name:
+#     ls.append(i)
+# print(ls)
+# # method
+# # #???????????????????????????????????????????????
+# # ls = [i for i in name]
+# # # here firts i acts as a place holder in list indexing
+# # print(ls)
+# # list of square root upto 100
+# ls = [i**2 for i in range(0,11)]
+# print(ls)
+# # cube root
+# ls = [i**3 for i in range(0,11)]
+# print(ls)
+# #table of 13
+# ls =[i*13 for i in range(1,11)]
+# print(ls)
+# #
+# #
+# # lets use if else statment in it
+# # even number list
+# ls =[i for i in range(0,25) if(i%2==0)]
+# print(ls)
+# # odd
+# ls =[i for i in range(0,25) if(i%2!=0)]
+# print(ls)
+# # number which are divislbe with both 3,7
+# ls = [i for i in range(0,101) if (i%3==0) if(i%7==0)]
+# print(ls)
+# # if else
+# ls = [i if (i%2==0) else "odd" for i in range(0,15) ]
+# print(ls)
+# ls =[i for i in range(0,15)]
+# print (ls)
+# lx = [f"{i*10:<2}cm" for i in ls]
+# print(lx)
+# lets convert gram in kg
+
+
+
+
+
+
+
+
+
+
 
 

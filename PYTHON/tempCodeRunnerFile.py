@@ -1,10 +1,9 @@
-if ('h'=="x"):
-# 	print("correct")
-# else:
-# 	print("not correct")
-# print("ENTER A NUMBER:")
-# x = int(input())# type casting is requried in python
-# if (x%2==0):
-# 	print("even")
-# else:
-# 	print("odd")
+ls = [7,8,9,7,1,4,5]
+
+
+# for i in range(len(ls)):
+#     if(i==ls[5]):
+#         break
+#     else:
+#         print(ls[i])
+#         i+=1
