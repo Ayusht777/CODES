@@ -365,6 +365,7 @@ print(e.istitle())"""
 import enum
 from optparse import Values
 import os
+from tkinter import X
 
 from pyparsing import Char # working dir folder
 # f = open("te.txt")
@@ -672,14 +673,57 @@ from pyparsing import Char # working dir folder
 # print (ls)
 # lx = [f"{i*10:<2}cm" for i in ls]
 # print(lx)
-# lets convert gram in kg
+# # lets convert gram in kg
+# n = int(input("ENTER NUMBER OF ELEMENT:"))
+# ls = []*n
+# sumx = 0
+# print("ENTER THE ELEMENT'S IN LIST IN GRAM")
+# for i in range(0,n):
+#     print(f"ENTER A ELEMENT NO {i+1}:")
+#     x = int(input())
+#     sumx = sumx +x
+#     ls.append(x)
+#     x = 0
 
+# print(ls)
+# kg = [f"{i/1000:>2} kg" for i in ls]
 
+# sumx = sumx/1000
+# print(kg)
+# print(f"{sumx:>2}kg")
+# ###############################################
+# #nested list
+# ld = [ [j for j in range(0,5)]for i in range(0,2)]
+# print(ld)
+#DICTINOARY COMPHERSIOSN
+dic = {"x":47,"y":90,"z":70}
+for i in dic.items():
+    print(i)
+for i in dic.keys():
+    print(i)
+for i in dic.values():
+    print(i)
 
+for (x,y) in dic.items():
+    print(x,"-----",y)
 
-
-
-
+for i  in dic:
+    print(i,"-=-=",dic[i])
+dix ={}
+x= 4
+for i in range(0,5):
+    dix[i]=x
+    x+=1
+print(dix)
+ix ={i+1:i*8 for i in range(0,3)}
+print(ix)
+ep ={}
+x =1
+for i in range(0,15):
+    if(i%2==0):
+        ep[f"key{x:>2}"]=i
+        x+=1
+print(ep)
 
 
 
